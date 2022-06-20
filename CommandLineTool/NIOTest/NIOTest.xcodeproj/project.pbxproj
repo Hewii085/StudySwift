@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		BCBB7DEC285C458A0067A139 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB7DEB285C458A0067A139 /* main.swift */; };
 		BCBB7DF4285C46420067A139 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = BCBB7DF3285C46420067A139 /* NIO */; };
-		BCBB7DF6285C46420067A139 /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = BCBB7DF5285C46420067A139 /* NIOCore */; };
+		BCE59B73285C4A91006F5029 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = BCE59B72285C4A91006F5029 /* NIO */; };
+		BCE59B75285C4AB9006F5029 /* TestClientChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE59B74285C4AB9006F5029 /* TestClientChannelHandler.swift */; };
+		BCE59B77285C4BEE006F5029 /* TcpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE59B76285C4BEE006F5029 /* TcpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		BCBB7DE8285C458A0067A139 /* NIOTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NIOTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBB7DEB285C458A0067A139 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BCE59B74285C4AB9006F5029 /* TestClientChannelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClientChannelHandler.swift; sourceTree = "<group>"; };
+		BCE59B76285C4BEE006F5029 /* TcpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TcpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCBB7DF6285C46420067A139 /* NIOCore in Frameworks */,
+				BCE59B73285C4A91006F5029 /* NIO in Frameworks */,
 				BCBB7DF4285C46420067A139 /* NIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				BCBB7DEB285C458A0067A139 /* main.swift */,
+				BCE59B74285C4AB9006F5029 /* TestClientChannelHandler.swift */,
+				BCE59B76285C4BEE006F5029 /* TcpClient.swift */,
 			);
 			path = NIOTest;
 			sourceTree = "<group>";
@@ -84,7 +90,7 @@
 			name = NIOTest;
 			packageProductDependencies = (
 				BCBB7DF3285C46420067A139 /* NIO */,
-				BCBB7DF5285C46420067A139 /* NIOCore */,
+				BCE59B72285C4A91006F5029 /* NIO */,
 			);
 			productName = NIOTest;
 			productReference = BCBB7DE8285C458A0067A139 /* NIOTest */;
@@ -116,6 +122,7 @@
 			mainGroup = BCBB7DDF285C458A0067A139;
 			packageReferences = (
 				BCBB7DF2285C46420067A139 /* XCRemoteSwiftPackageReference "swift-nio" */,
+				BCE59B71285C4A91006F5029 /* XCRemoteSwiftPackageReference "swift-nio" */,
 			);
 			productRefGroup = BCBB7DE9285C458A0067A139 /* Products */;
 			projectDirPath = "";
@@ -132,6 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCBB7DEC285C458A0067A139 /* main.swift in Sources */,
+				BCE59B75285C4AB9006F5029 /* TestClientChannelHandler.swift in Sources */,
+				BCE59B77285C4BEE006F5029 /* TcpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +310,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		BCE59B71285C4A91006F5029 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -309,10 +326,10 @@
 			package = BCBB7DF2285C46420067A139 /* XCRemoteSwiftPackageReference "swift-nio" */;
 			productName = NIO;
 		};
-		BCBB7DF5285C46420067A139 /* NIOCore */ = {
+		BCE59B72285C4A91006F5029 /* NIO */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BCBB7DF2285C46420067A139 /* XCRemoteSwiftPackageReference "swift-nio" */;
-			productName = NIOCore;
+			productName = NIO;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
