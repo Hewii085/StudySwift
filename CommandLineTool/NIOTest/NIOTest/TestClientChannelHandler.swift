@@ -10,9 +10,9 @@ import NIO
 
 class TestClientChannelHandler : ChannelInboundHandler, ChannelOutboundHandler
 {
-    typealias InboundIn = MessageResponse
-    typealias OutboundIn = [UInt8]
-    
+    public typealias InboundIn = MessageResponse
+    public typealias OutboundIn = RequestWrapper
+    public typealias OutboundOut = String
     
     func channelInactive(context: ChannelHandlerContext) {
         print("Channel Inactivate")
@@ -24,10 +24,11 @@ class TestClientChannelHandler : ChannelInboundHandler, ChannelOutboundHandler
     
     func channelRead(context: ChannelHandlerContext, data: NIOAny)
     {
-       
+       print("read Packet")
     }
     
     func write(context: ChannelHandlerContext, data: NIOAny, promise: EventLoopPromise<Void>?) {
-        //write Logic 작성.
+        let reqWrapper = self.unwrapOutboundIn(data)
+        context.write(wrapOutboundOut(reqWrapper.request), promise: promise)
     }
 }

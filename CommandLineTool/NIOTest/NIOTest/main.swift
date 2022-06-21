@@ -9,43 +9,9 @@ import Foundation
 import NIO
 import CloudKit
 
+let arry = [1,2,3,4,5]
+
+print(arry[0...1])
+
 //let eventLoopGrp = MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount)
 //let clnt = TcpClient(group: eventLoopGrp)
-
-func asyncPrint(on ev: EventLoop, delayInSecond: UInt32, string:String) ->EventLoopFuture<String> {
-    
-    let promise = ev.makePromise(of: String.self)
-    
-    let _ = ev.submit {
-        sleepAndPrint(delayInSecond: delayInSecond, string : string)
-        promise.succeed("Success")
-        return
-    }
-    
-    return promise.futureResult
-}
-
-func sleepAndPrint(delayInSecond : UInt32, string: String) {
-    sleep(delayInSecond)
-    print(string)
-}
-
-print("System Cores: \(System.coreCount)\n")
-
-let evGroup = MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount)
-let ev = evGroup.next()
-let future = asyncPrint(on: ev, delayInSecond: 10, string: "Hello ")
-
-print("Waiting...")
-
-future.whenSuccess{ message in
-    print(message)
-}
-
-future.whenFailure{ message in
-    print(message)
-}
-
-print("world!")
-
-try evGroup.syncShutdownGracefully()

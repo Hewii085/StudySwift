@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC7D982D28617DAC00945647 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D982C28617DAC00945647 /* Tester.swift */; };
 		BCBB7DEC285C458A0067A139 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB7DEB285C458A0067A139 /* main.swift */; };
 		BCBB7DF4285C46420067A139 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = BCBB7DF3285C46420067A139 /* NIO */; };
 		BCE59B73285C4A91006F5029 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = BCE59B72285C4A91006F5029 /* NIO */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC7D982C28617DAC00945647 /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
 		BCBB7DE8285C458A0067A139 /* NIOTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NIOTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBB7DEB285C458A0067A139 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BCE59B74285C4AB9006F5029 /* TestClientChannelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClientChannelHandler.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				BCBB7DEB285C458A0067A139 /* main.swift */,
 				BCE59B74285C4AB9006F5029 /* TestClientChannelHandler.swift */,
 				BCE59B76285C4BEE006F5029 /* TcpClient.swift */,
+				BC7D982C28617DAC00945647 /* Tester.swift */,
 			);
 			path = NIOTest;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				BCBB7DEC285C458A0067A139 /* main.swift in Sources */,
 				BCE59B75285C4AB9006F5029 /* TestClientChannelHandler.swift in Sources */,
+				BC7D982D28617DAC00945647 /* Tester.swift in Sources */,
 				BCE59B77285C4BEE006F5029 /* TcpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
